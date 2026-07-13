@@ -46,19 +46,33 @@ const JahnviSweetSixteen = () => {
   ];
 
   const performances = [
-    { id: 1, title: 'Opening Dance', performer: 'Avani & Nishit', type: '🎬 Bollywood Fiesta' },
-    { id: 2, title: 'Avani & Sakhi Group Dance', performer: 'Avani & Friends', type: '👭 Jamkudi Magic' },
-    { id: 3, title: 'BAYVP Couple Dance - 1', performer: 'BAYVP Dancers', type: '💃 Divine Duet' },
-    { id: 4, title: 'Bollywood Couple Dance - 2', performer: 'Dance Couple', type: '💃 Bollywood Romance' },
-    { id: 5, title: 'Bollywood Couple Dance - 3', performer: 'Dance Couple', type: '💃 Shimmer & Shine' },
-    { id: 6, title: 'BAYVP Fab-4 Performance', performer: 'BAYVP Stars', type: '✨ Quad Magic' },
-    { id: 7, title: 'Jahnvi School Friends - 1', performer: 'School Friends', type: '👯 Friendship Beats' },
-    { id: 8, title: 'Jahnvi School Friends - 2', performer: 'School Friends', type: '👯 Squad Goals' },
-    { id: 9, title: 'Avani Solo Performance', performer: 'Avani', type: '🌟 Solo Spotlight' },
-    { id: 10, title: 'Bollywood Couple Dance - 4', performer: 'Dance Couple', type: '💃 Bollywood Bliss' },
-    { id: 11, title: 'Bollywood Couple Dance - 5', performer: 'Dance Couple', type: '💃 Groove Paradise' },
-    { id: 12, title: 'Grand Finale', performer: 'Avani & Nishit', type: '👑 Spectacular Finale' }
+    { id: 1, title: 'Opening Dance', performer: 'Avani & Nishit', type: '🎬 Bollywood Fiesta', videoId: 'K2q8ShzyztU' },
+    { id: 2, title: 'Avani & Sakhi Group Dance', performer: 'Avani & Friends', type: '👭 Jamkudi Magic', videoId: '57lh1cpk1zI' },
+    { id: 3, title: 'BAYVP Couple Dance - 1', performer: 'BAYVP Dancers', type: '💃 Divine Duet', videoId: '' },
+    { id: 4, title: 'Bollywood Couple Dance - 2', performer: 'Dance Couple', type: '💃 Bollywood Romance', videoId: 'sI1sEQYt0WM' },
+    { id: 5, title: 'Bollywood Couple Dance - 3', performer: 'Dance Couple', type: '💃 Shimmer & Shine', videoId: '' },
+    { id: 6, title: 'BAYVP Fab-4 Performance', performer: 'BAYVP Stars', type: '✨ Quad Magic', videoId: 'dlyjfRmo5E8' },
+    { id: 7, title: 'Jahnvi School Friends - 1', performer: 'School Friends', type: '👯 Friendship Beats', videoId: '' },
+    { id: 8, title: 'Jahnvi School Friends - 2', performer: 'School Friends', type: '👯 Squad Goals', videoId: 'hnu-2vqUyIw' },
+    { id: 9, title: 'Avani Solo Performance', performer: 'Avani', type: '🌟 Solo Spotlight', videoId: 'Io45YNdGRJI' },
+    { id: 10, title: 'Bollywood Couple Dance - 4', performer: 'Dance Couple', type: '💃 Bollywood Bliss', videoId: '9nwvxiqg9R4' },
+    { id: 11, title: 'Bollywood Couple Dance - 5', performer: 'Dance Couple', type: '💃 Groove Paradise', videoId: 'e1-TIeToqnY' },
+    { id: 12, title: 'Grand Finale', performer: 'Avani & Nishit', type: '👑 Spectacular Finale', videoId: '1h9Hl7DIarg' }
   ];
+
+  const speeches = [
+    { id: 1, title: 'Mahaksh Speech', speaker: 'Mahaksh (Brother)', type: '💬 Sibling Love', videoId: '' },
+    { id: 2, title: 'Yashu Speech', speaker: 'Yashu (School Friend)', type: '👯 Friendship', videoId: '' },
+    { id: 3, title: 'Molly & Riddhi Speech', speaker: 'Molly & Riddhi (School Friends)', type: '👯 Friend Duo', videoId: '' },
+    { id: 4, title: 'Jenna Speech', speaker: 'Jenna (Gymnastics Mate)', type: '🏅 Gym Buddy', videoId: '' },
+    { id: 5, title: 'Crystal Speech', speaker: 'Crystal (Gymnastics Mate)', type: '🏅 Gym Buddy', videoId: '' },
+    { id: 6, title: 'Kavya Speech', speaker: 'Kavya (School Friend)', type: '👯 School Friend', videoId: '' },
+    { id: 7, title: 'Bhavinbhai Speech', speaker: 'Bhavinbhai (Family)', type: '❤️ Family', videoId: '' },
+    { id: 8, title: 'Avani Speech', speaker: 'Avani (Mother)', type: '👩 Parental Love', videoId: '' },
+    { id: 9, title: 'Nishit Speech', speaker: 'Nishit (Father)', type: '👨 Parental Love', videoId: '' }
+  ];
+
+  const [activeSpeechIndex, setActiveSpeechIndex] = useState(0);
 
   const timelineEvents = [
     { time: '5:30 PM', title: 'Guest Arrival', emoji: '🎉' },
@@ -158,7 +172,6 @@ const JahnviSweetSixteen = () => {
               <br />અથાગ મેહનતની સાથે જેણે પ્રેમનો ધોધ વરસાવ્યો છે,
               <br />તેવી વ્હાલસોયી દીકરી જાહન્વી ના સોળ વરસ ની વાત કરવી છે।"
             </p>
-            <p className="text-center text-amber-300 mt-6 text-sm">~ નિશિત દલાલ</p>
           </div>
         </div>
       </section>
@@ -384,7 +397,7 @@ const JahnviSweetSixteen = () => {
         </div>
       </section>
 
-      {/* PERFORMANCES */}
+      {/* PERFORMANCES WITH VIDEOS */}
       <section className="py-24 px-4 md:px-8 relative">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-playfair font-black text-center mb-20 gradient-text">
@@ -392,6 +405,22 @@ const JahnviSweetSixteen = () => {
           </h2>
 
           <div className="bg-gradient-to-br from-purple-800/30 to-purple-900/30 backdrop-blur-lg border border-purple-700/30 rounded-2xl p-12 mb-12">
+            {/* Video or Info Display */}
+            {performances[activePerformanceIndex].videoId ? (
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-8 shadow-lg">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${performances[activePerformanceIndex].videoId}`}
+                  title={performances[activePerformanceIndex].title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            ) : null}
+
             <div className="text-center space-y-6">
               <div>
                 <div className="text-7xl font-playfair font-black bg-gradient-to-r from-amber-300 to-pink-300 bg-clip-text text-transparent">
@@ -460,6 +489,84 @@ const JahnviSweetSixteen = () => {
           </div>
 
           <p className="text-center text-purple-300 mt-6 italic">Special moments with her beloved brother Mahaksh</p>
+        </div>
+      </section>
+
+      {/* SPEECHES SECTION */}
+      <section className="py-24 px-4 md:px-8 relative">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-5xl md:text-6xl font-playfair font-black text-center mb-20 gradient-text">
+            Heartfelt Speeches
+          </h2>
+
+          <div className="bg-gradient-to-br from-purple-800/30 to-purple-900/30 backdrop-blur-lg border border-purple-700/30 rounded-2xl p-12 mb-12">
+            {/* Video or Info Display */}
+            {speeches[activeSpeechIndex].videoId ? (
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-8 shadow-lg">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${speeches[activeSpeechIndex].videoId}`}
+                  title={speeches[activeSpeechIndex].title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            ) : (
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-8 bg-gradient-to-br from-purple-700 to-purple-900 flex items-center justify-center shadow-lg">
+                <div className="text-center">
+                  <div className="text-6xl mb-4">🎤</div>
+                  <p className="text-purple-300 text-lg">Ready for speech video</p>
+                </div>
+              </div>
+            )}
+
+            <div className="text-center space-y-6">
+              <div>
+                <div className="text-7xl font-playfair font-black bg-gradient-to-r from-amber-300 to-pink-300 bg-clip-text text-transparent">
+                  {activeSpeechIndex + 1}/9
+                </div>
+              </div>
+              <div>
+                <h3 className="text-4xl font-playfair font-bold mb-2 text-white">
+                  {speeches[activeSpeechIndex].title}
+                </h3>
+                <p className="text-lg text-amber-300 mb-2">{speeches[activeSpeechIndex].speaker}</p>
+                <p className="text-purple-300">{speeches[activeSpeechIndex].type}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <div className="flex justify-center items-center gap-4">
+            <button
+              onClick={() => setActiveSpeechIndex((prev) => (prev - 1 + speeches.length) % speeches.length)}
+              className="p-3 rounded-full bg-gradient-to-r from-amber-500 to-purple-600 hover:shadow-lg hover:shadow-amber-500/50 transition-all"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <div className="flex gap-1 max-w-2xl overflow-x-auto">
+              {speeches.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveSpeechIndex(i)}
+                  className={`flex-shrink-0 h-2 rounded-full transition-all ${
+                    i === activeSpeechIndex ? 'bg-amber-400 w-8' : 'bg-purple-600 w-2'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={() => setActiveSpeechIndex((prev) => (prev + 1) % speeches.length)}
+              className="p-3 rounded-full bg-gradient-to-r from-amber-500 to-purple-600 hover:shadow-lg hover:shadow-amber-500/50 transition-all"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </section>
 
@@ -600,9 +707,6 @@ const JahnviSweetSixteen = () => {
           <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl mb-12">
             <p className="text-purple-100 mb-4 text-lg italic font-light leading-relaxed">
               "ભગવદ્ ગીતામાં જેટલું મહત્વ ભક્તિયોગનું છે, એટલું જ મહત્વ મારી જીવનગીતામાં "દીકરીયોગ"નું છે।"
-            </p>
-            <p className="text-sm text-purple-400 italic">
-              ~ નિશિત દલાલ
             </p>
           </div>
 
