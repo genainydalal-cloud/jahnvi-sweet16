@@ -48,28 +48,27 @@ const JahnviSweetSixteen = () => {
   const performances = [
     { id: 1, title: 'Opening Dance', performer: 'Avani & Nishit', type: '🎬 Bollywood Fiesta', videoId: 'K2q8ShzyztU' },
     { id: 2, title: 'Avani & Sakhi Group Dance', performer: 'Avani & Friends', type: '👭 Jamkudi Magic', videoId: '57lh1cpk1zI' },
-    { id: 3, title: 'BAYVP Couple Dance - 1', performer: 'BAYVP Dancers', type: '💃 Divine Duet', videoId: '' },
+    { id: 3, title: 'BAYVP Couple Dance - 1', performer: 'BAYVP Dancers', type: '💃 Divine Duet', videoId: 'Ue-45Xa5gBs' },
     { id: 4, title: 'Bollywood Couple Dance - 2', performer: 'Dance Couple', type: '💃 Bollywood Romance', videoId: 'sI1sEQYt0WM' },
-    { id: 5, title: 'Bollywood Couple Dance - 3', performer: 'Dance Couple', type: '💃 Shimmer & Shine', videoId: '' },
+    { id: 5, title: 'Bollywood Couple Dance - 3', performer: 'Dance Couple', type: '💃 Shimmer & Shine', videoId: '0uksSxz90w8' },
     { id: 6, title: 'BAYVP Fab-4 Performance', performer: 'BAYVP Stars', type: '✨ Quad Magic', videoId: 'dlyjfRmo5E8' },
-    { id: 7, title: 'Jahnvi School Friends - 1', performer: 'School Friends', type: '👯 Friendship Beats', videoId: '' },
-    { id: 8, title: 'Jahnvi School Friends - 2', performer: 'School Friends', type: '👯 Squad Goals', videoId: 'hnu-2vqUyIw' },
-    { id: 9, title: 'Avani Solo Performance', performer: 'Avani', type: '🌟 Solo Spotlight', videoId: 'Io45YNdGRJI' },
-    { id: 10, title: 'Bollywood Couple Dance - 4', performer: 'Dance Couple', type: '💃 Bollywood Bliss', videoId: '9nwvxiqg9R4' },
-    { id: 11, title: 'Bollywood Couple Dance - 5', performer: 'Dance Couple', type: '💃 Groove Paradise', videoId: 'e1-TIeToqnY' },
-    { id: 12, title: 'Grand Finale', performer: 'Avani & Nishit', type: '👑 Spectacular Finale', videoId: '1h9Hl7DIarg' }
+    { id: 7, title: 'Jahnvi School Friends - 2', performer: 'School Friends', type: '👯 Squad Goals', videoId: 'hnu-2vqUyIw' },
+    { id: 8, title: 'Avani Solo Performance', performer: 'Avani', type: '🌟 Solo Spotlight', videoId: 'Io45YNdGRJI' },
+    { id: 9, title: 'Bollywood Couple Dance - 4', performer: 'Dance Couple', type: '💃 Bollywood Bliss', videoId: '9nwvxiqg9R4' },
+    { id: 10, title: 'Bollywood Couple Dance - 5', performer: 'Dance Couple', type: '💃 Groove Paradise', videoId: 'e1-TIeToqnY' },
+    { id: 11, title: 'Grand Finale', performer: 'Avani & Nishit', type: '👑 Spectacular Finale', videoId: '1h9Hl7DIarg' }
   ];
 
   const speeches = [
-    { id: 1, title: 'Mahaksh Speech', speaker: 'Mahaksh (Brother)', type: '💬 Sibling Love', videoId: '' },
-    { id: 2, title: 'Yashu Speech', speaker: 'Yashu (School Friend)', type: '👯 Friendship', videoId: '' },
-    { id: 3, title: 'Molly & Riddhi Speech', speaker: 'Molly & Riddhi (School Friends)', type: '👯 Friend Duo', videoId: '' },
-    { id: 4, title: 'Jenna Speech', speaker: 'Jenna (Gymnastics Mate)', type: '🏅 Gym Buddy', videoId: '' },
-    { id: 5, title: 'Crystal Speech', speaker: 'Crystal (Gymnastics Mate)', type: '🏅 Gym Buddy', videoId: '' },
-    { id: 6, title: 'Kavya Speech', speaker: 'Kavya (School Friend)', type: '👯 School Friend', videoId: '' },
-    { id: 7, title: 'Bhavinbhai Speech', speaker: 'Bhavinbhai (Family)', type: '❤️ Family', videoId: '' },
-    { id: 8, title: 'Avani Speech', speaker: 'Avani (Mother)', type: '👩 Parental Love', videoId: '' },
-    { id: 9, title: 'Nishit Speech', speaker: 'Nishit (Father)', type: '👨 Parental Love', videoId: '' }
+    { id: 1, title: 'Mahaksh Speech', speaker: 'Mahaksh (Brother)', type: '💬 Sibling Love', videoId: 'RIDMWwo7wls' },
+    { id: 2, title: 'Yashu Speech', speaker: 'Yashu (School Friend)', type: '👯 Friendship', videoId: 'wfeGF_iBzzk' },
+    { id: 3, title: 'Molly & Riddhi Speech', speaker: 'Molly & Riddhi (School Friends)', type: '👯 Friend Duo', videoId: 't6Gzjq5Mink' },
+    { id: 4, title: 'Jenna Speech', speaker: 'Jenna (Gymnastics Mate)', type: '🏅 Gym Buddy', videoId: 'VkHn2Q-gZe8' },
+    { id: 5, title: 'Crystal Speech', speaker: 'Crystal (Gymnastics Mate)', type: '🏅 Gym Buddy', videoId: 'p-KBeSA5S_w' },
+    { id: 6, title: 'Kavya Speech', speaker: 'Kavya (School Friend)', type: '👯 School Friend', videoId: 'AjRUBSxslXU' },
+    { id: 7, title: 'Bhavinbhai Speech', speaker: 'Bhavinbhai (Family)', type: '❤️ Family', videoId: '5vGD_6p9bhc' },
+    { id: 8, title: 'Avani Speech', speaker: 'Avani (Mother)', type: '👩 Parental Love', videoId: 'pg4z3ueuj9Y' },
+    { id: 9, title: 'Nishit Speech', speaker: 'Nishit (Father)', type: '👨 Parental Love', videoId: 'ARsYvN6Ja9g' }
   ];
 
   const [activeSpeechIndex, setActiveSpeechIndex] = useState(0);
@@ -401,7 +400,7 @@ const JahnviSweetSixteen = () => {
       <section className="py-24 px-4 md:px-8 relative">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-playfair font-black text-center mb-20 gradient-text">
-            12 Dance Performances
+            11 Dance Performances
           </h2>
 
           <div className="bg-gradient-to-br from-purple-800/30 to-purple-900/30 backdrop-blur-lg border border-purple-700/30 rounded-2xl p-12 mb-12">
@@ -424,7 +423,7 @@ const JahnviSweetSixteen = () => {
             <div className="text-center space-y-6">
               <div>
                 <div className="text-7xl font-playfair font-black bg-gradient-to-r from-amber-300 to-pink-300 bg-clip-text text-transparent">
-                  {activePerformanceIndex + 1}/12
+                  {activePerformanceIndex + 1}/11
                 </div>
               </div>
               <div>
