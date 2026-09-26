@@ -139,6 +139,7 @@ const JahnviSweetSixteen = () => {
             <input
               type="password"
               placeholder="Enter Password"
+              autoFocus
               value={passwordInput}
               onChange={(e) => setPasswordInput(e.target.value)}
               className="w-full px-6 py-3 bg-purple-900/50 border border-purple-600 rounded-lg text-white placeholder-purple-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50"
