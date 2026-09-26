@@ -74,8 +74,6 @@ const JahnviSweetSixteen = () => {
     { id: 9, title: 'Nishit Speech', speaker: 'Nishit (Father)', type: '👨 Parental Love', videoId: 'ARsYvN6Ja9g' }
   ];
 
-  const [activeSpeechIndex, setActiveSpeechIndex] = useState(0);
-
   const timelineEvents = [
     { time: '5:30 PM', title: 'Guest Arrival', emoji: '🎉' },
     { time: '6:30 PM', title: 'Event Starts - Avani & Nishit Entry', emoji: '👑' },
