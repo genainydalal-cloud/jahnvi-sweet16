@@ -7,6 +7,9 @@ const JahnviSweetSixteen = () => {
   const [activeJourneyIndex, setActiveJourneyIndex] = useState(0);
   const [scrollY, setScrollY] = useState(0);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [activeSpeechIndex, setActiveSpeechIndex] = useState(0);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [passwordInput, setPasswordInput] = useState('');
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -106,6 +109,60 @@ const JahnviSweetSixteen = () => {
   const prevPerformance = () => setActivePerformanceIndex((prev) => (prev - 1 + performances.length) % performances.length);
   const nextJourney = () => setActiveJourneyIndex((prev) => (prev + 1) % journeyPhotos.length);
   const prevJourney = () => setActiveJourneyIndex((prev) => (prev - 1 + journeyPhotos.length) % journeyPhotos.length);
+
+  const handlePasswordSubmit = (e) => {
+    e.preventDefault();
+    if (passwordInput === 'Sweet16') {
+      setIsAuthenticated(true);
+    } else {
+      alert('❌ Incorrect password. Please try again.');
+      setPasswordInput('');
+    }
+  };
+
+  // Password Gate Component
+  const PasswordGate = () => (
+    <div className="w-full min-h-screen bg-purple-950 flex items-center justify-center px-4">
+      <div className="max-w-md w-full">
+        <div className="bg-gradient-to-br from-purple-800/30 to-purple-900/30 backdrop-blur-lg border border-purple-700/30 rounded-2xl p-12 text-center space-y-8">
+          {/* Emoji */}
+          <div className="text-7xl">🎉</div>
+
+          {/* Title */}
+          <div>
+            <h1 className="text-5xl md:text-6xl font-playfair font-black mb-4">
+              <span className="gradient-text">Welcome</span>
+            </h1>
+            <p className="text-purple-200 text-lg">To Jahnvi's Sweet 16 Celebration</p>
+          </div>
+
+          {/* Password Form */}
+          <form onSubmit={handlePasswordSubmit} className="space-y-4">
+            <input
+              type="password"
+              placeholder="Enter Password"
+              value={passwordInput}
+              onChange={(e) => setPasswordInput(e.target.value)}
+              className="w-full px-6 py-3 bg-purple-900/50 border border-purple-600 rounded-lg text-white placeholder-purple-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50"
+            />
+            <button
+              type="submit"
+              className="w-full px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-purple-950 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all duration-300"
+            >
+              Enter Celebration
+            </button>
+          </form>
+
+          {/* Hint */}
+          <p className="text-purple-400 text-sm italic">💡 Hint: Think about the occasion!</p>
+        </div>
+      </div>
+    </div>
+  );
+
+  if (!isAuthenticated) {
+    return <PasswordGate />;
+  }
 
   return (
     <div className="w-full bg-purple-950 text-white overflow-hidden">
